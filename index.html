@@ -12,21 +12,21 @@
 <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
-  --navy-950:#060D19;
-  --navy-900:#081120;
-  --navy-800:#0C1A30;
-  --navy-750:#102138;
-  --gold:#C6A15B;
-  --gold-2:#E3C688;
-  --gold-line:rgba(198,161,91,.36);
-  --gold-line-soft:rgba(198,161,91,.18);
-  --ivory:#F6F3EC;
-  --ivory-2:#EFEAE0;
-  --ink:#141E2E;
-  --ink-soft:#556072;
-  --ink-mid:#4C5768;
-  --on-dark:#EDE9E0;
-  --on-dark-soft:rgba(237,233,224,.62);
+  --navy-950:#102039;
+  --navy-900:#152743;
+  --navy-800:#1B3153;
+  --navy-750:#213A61;
+  --gold:#CBA862;
+  --gold-2:#EACF93;
+  --gold-line:rgba(206,170,96,.42);
+  --gold-line-soft:rgba(206,170,96,.22);
+  --ivory:#FBF9F4;
+  --ivory-2:#F3EFE6;
+  --ink:#1B2740;
+  --ink-soft:#5B6678;
+  --ink-mid:#515C6E;
+  --on-dark:#F2EEE6;
+  --on-dark-soft:rgba(242,238,230,.70);
   --serif:'Noto Serif KR',Georgia,serif;
   --latin:'Cormorant Garamond',Georgia,serif;
   --sans:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Malgun Gothic',sans-serif;
@@ -78,11 +78,11 @@ ul{list-style:none}
 
 /* ---------- hero ---------- */
 .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;background:
-  radial-gradient(1100px 520px at 50% -8%,rgba(198,161,91,.13),transparent 62%),
+  radial-gradient(1100px 520px at 50% -8%,rgba(206,170,96,.17),transparent 62%),
   radial-gradient(900px 600px at 85% 110%,rgba(198,161,91,.07),transparent 60%),
-  linear-gradient(180deg,var(--navy-950),var(--navy-900) 55%,#0A1526);
+  linear-gradient(180deg,var(--navy-950),var(--navy-900) 55%,#1B3153);
   overflow:hidden}
-.hero-frame{display:none !important;}
+.hero-frame{position:absolute;inset:26px;pointer-events:none}
 .hero-frame::before,.hero-frame::after{content:'';position:absolute;inset:0;border:1px solid var(--gold-line);transition:clip-path 1.6s ease .2s}
 .hero-frame::after{inset:7px;border-color:var(--gold-line-soft)}
 .hero-frame .c{position:absolute;width:22px;height:22px;border:1px solid var(--gold);opacity:.9}
@@ -102,7 +102,7 @@ ul{list-style:none}
 .btn-solid:hover{background:var(--gold-2);border-color:var(--gold-2);box-shadow:0 8px 30px rgba(198,161,91,.28)}
 .btn-ghost{color:var(--gold-2)}
 .btn-ghost:hover{background:rgba(198,161,91,.1)}
-.hero-stats{position:absolute;left:0;right:0;bottom:0;z-index:2;border-top:1px solid var(--gold-line-soft);background:linear-gradient(180deg,rgba(6,13,25,0),rgba(6,13,25,.55))}
+.hero-stats{position:absolute;left:0;right:0;bottom:0;z-index:2;border-top:1px solid var(--gold-line-soft);background:linear-gradient(180deg,rgba(16,32,57,0),rgba(16,32,57,.50))}
 .hero-stats .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
 .hstat{padding:26px 10px;text-align:center;border-left:1px solid var(--gold-line-soft)}
 .hstat:first-child{border-left:0}
@@ -176,7 +176,7 @@ ul{list-style:none}
 
 /* ---------- allpay ---------- */
 .pay-shell{border:1px solid var(--gold-line);position:relative;padding:78px 70px;background:
-  radial-gradient(760px 340px at 18% 0%,rgba(198,161,91,.1),transparent 60%),var(--navy-950)}
+  radial-gradient(760px 340px at 18% 0%,rgba(206,170,96,.16),transparent 62%),var(--navy-950)}
 .pay-shell::after{content:'';position:absolute;inset:8px;border:1px solid var(--gold-line-soft);pointer-events:none}
 .pay-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;position:relative;z-index:1}
 .pay-brand{font-family:var(--latin);letter-spacing:.5em;font-size:12px;color:var(--gold);text-transform:uppercase}
@@ -235,6 +235,8 @@ ul{list-style:none}
 .net-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .store{background:#FDFCF9;border:1px solid #DFD6C2;padding:30px 28px 26px;position:relative;transition:border-color .35s,box-shadow .35s,transform .35s}
 .store.hide{display:none}
+.net-help{margin:-14px 0 26px;font-size:13px;color:var(--ink-mid);letter-spacing:.01em}.net-help b{color:#8A6A2E;font-weight:600}
+.store-photo{position:relative;aspect-ratio:16/10;margin:-30px -28px 20px;border-bottom:1px solid var(--gold-line-soft);background:linear-gradient(135deg,var(--navy-800),var(--navy-950));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;overflow:hidden}.store-photo::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 180px at 50% 0%,rgba(206,170,96,.14),transparent 60%)}.store-photo::after{content:"";position:absolute;inset:12px;border:1px solid rgba(206,170,96,.28);pointer-events:none}.sp-name{position:relative;font-family:var(--serif);font-size:19px;font-weight:700;color:var(--on-dark);letter-spacing:.02em;text-align:center;padding:0 18px;word-break:keep-all}.sp-tag{position:relative;font-family:var(--latin);font-size:11px;letter-spacing:.34em;color:var(--gold-2);text-transform:uppercase}
 .store[data-map]{cursor:pointer}
 .store[data-map]:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .store-go{display:inline-block;margin-top:10px;font-size:11.5px;letter-spacing:.1em;color:#9A7B3E;opacity:.75;transition:opacity .3s,transform .3s}
@@ -325,7 +327,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
 .teaser-nums b{display:block;font-family:var(--latin);font-size:38px;font-weight:500;color:var(--ink);line-height:1.1}
 .teaser-nums b i{font-style:normal;font-size:.5em;color:#9A7B3E}
 .teaser-nums span{font-size:12px;letter-spacing:.14em;color:var(--ink-mid)}
-.pgnet-hero{background:radial-gradient(900px 420px at 50% -10%,rgba(198,161,91,.14),transparent 60%),linear-gradient(180deg,var(--navy-950),var(--navy-900));color:var(--on-dark);padding:130px 0 58px;border-bottom:1px solid var(--gold-line-soft)}
+.pgnet-hero{background:radial-gradient(900px 420px at 50% -10%,rgba(206,170,96,.18),transparent 60%),linear-gradient(180deg,var(--navy-950),var(--navy-900));color:var(--on-dark);padding:130px 0 58px;border-bottom:1px solid var(--gold-line-soft)}
 .pgnet-title{font-family:var(--serif);font-weight:900;font-size:clamp(26px,4vw,42px);margin:18px 0 30px;color:var(--on-dark);word-break:keep-all}
 .pgnet-stats{display:flex;gap:44px;flex-wrap:wrap}
 .pgnet-stats b{display:block;font-family:var(--latin);font-size:30px;font-weight:500;color:var(--gold-2);line-height:1.1}
@@ -511,7 +513,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
   <div class="hero-in">
     <span class="eyebrow rv">GL Holdings · Sports Infrastructure Group</span>
     <h1 class="rv d1">스포츠 산업의 <em>운영</em>과 <em>금융</em>을<br>하나의 표준으로 만듭니다</h1>
-    <p class="hero-sub rv d2">전국 직영 골프 아카데미 네트워크의 운영 노하우 위에 결제 VAN 인프라와 안심결제 금융을 결합했습니다. 지엘홀딩스는 현장과 결제의 전 과정을 직접 설계하는 스포츠 인프라 그룹입니다.</p>
+    <p class="hero-sub rv d2">전국 직영 골프 아카데미 네트워크의 운영 노하우 위에 결제 VAN 인프라와 스포츠 안심결제를 결합했습니다. 지엘홀딩스는 현장과 결제의 전 과정을 직접 설계하는 스포츠 인프라 그룹입니다.</p>
     <div class="hero-cta rv d3">
       <a class="btn btn-solid" href="#contact">제휴 문의하기</a>
       <a class="btn btn-ghost" href="#group">그룹 소개 보기</a>
@@ -546,7 +548,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <div class="org-cell">
           <span class="tag">Fintech Subsidiary</span>
           <h4>지엘올페이<small>GL Allpay</small></h4>
-          <p>스포츠 안심결제 플랫폼. 킵페이(KEEPPAY) 안심보장과 결제 인프라를 운영하는 그룹의 핀테크 엔진입니다.</p>
+          <p>스포츠 안심결제 플랫폼. 체육시설 선불 결제의 안심보장과 결제 인프라를 운영하는 그룹의 핀테크 엔진입니다.</p>
         </div>
         <div class="org-cell">
           <span class="tag">Direct Operation</span>
@@ -598,7 +600,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         </div>
         <ul class="lead-ul">
           <li><span><b>(주)포시즌 대표이사</b> · 골프 산업 25년</span></li>
-          <li><span><b>최경주재단 이사</b> · 골프 꿈나무와 청소년들을 위한 지원 사업</span></li>
+          <li><span>유튜브 '뻐꾸기 골프'의 <b>'박사장'</b> — 강력한 미디어 영향력</span></li>
           <li><span>국내 주요 골프장 · 컨트리클럽 네트워크 보유</span></li>
           <li><span>국내외 스포츠 마케팅 및 비즈니스 확장 전략 주도</span></li>
           <li><span>지엘홀딩스 대외 전략 · 파트너십 총괄</span></li>
@@ -645,22 +647,22 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
     <div class="pay-shell rv">
       <div class="pay-grid">
         <div>
-          <span class="pay-brand">GL Allpay · Keeppay</span>
+          <span class="pay-brand">GL Allpay · Sports Payment</span>
           <h2 class="pay-h">지엘올페이,<br>스포츠 <em>안심결제</em>의 표준</h2>
-          <p class="pay-p">지엘홀딩스의 핀테크 자회사 지엘올페이는 체육시설 선불 결제의 '먹튀' 리스크를 구조적으로 해결하는 킵페이(KEEPPAY) 안심결제를 운영합니다. 소비자에게는 안심을, 가맹점에게는 신뢰와 객단가 상승을 제공합니다.</p>
+          <p class="pay-p">지엘홀딩스의 핀테크 자회사 지엘올페이는 체육시설 선불 결제의 '먹튀' 리스크를 구조적으로 해결하는 스포츠 안심결제를 운영합니다. 소비자에게는 안심을, 가맹점에게는 신뢰와 객단가 상승을 제공합니다.</p>
           <ul class="pay-feats">
             <li><b>300<i style="font-size:.5em">만 원</i></b><div><strong>회원권당 최대 300만 원 보장</strong>시설 휴·폐업 시 미이용 잔액을 보장합니다. 회원권과 PT권은 각각 중복 보장됩니다.</div></li>
-            <li><b>12<i style="font-size:.5em">개월</i></b><div><strong>장기권 무이자 할부</strong>고액 회원권도 부담 없이. 무이자 구조로 가맹점의 객단가와 장기권 판매를 끌어올립니다.</div></li>
+            <li><b>12<i style="font-size:.5em">개월</i></b><div><strong>장기권 분담무이자 할부</strong>고액 회원권도 부담 없이. 분담무이자 구조로 가맹점의 객단가와 장기권 판매를 끌어올립니다.</div></li>
             <li><b>2<i style="font-size:.5em">주</i></b><div><strong>신속한 직접 환불 · 시설 이관</strong>사고 발생 시 잔여 이용금을 회원 계좌로 직접 환불하거나 인근 제휴 시설로 이관합니다.</div></li>
           </ul>
         </div>
         <aside class="reg-card">
           <span class="reg-k">Regulation Ready</span>
-          <h3 class="reg-t">정부 규제가 의무화한<br>소비자 보호, 킵페이로 완결</h3>
+          <h3 class="reg-t">정부 규제가 의무화한<br>소비자 보호, 스포츠 안심결제로 완결</h3>
           <div class="reg-li"><span>공정거래위원회 「중요한 표시·광고사항 고시」 개정 — <b>2025년 11월 12일 시행</b></span></div>
           <div class="reg-li"><span>헬스·요가·필라테스 사업자, 피해보상수단 가입 여부 · 보장기관 · 보장금액 <b>표시 의무화</b></span></div>
           <div class="reg-li"><span>위반 시 <b>과태료 최대 1억 원</b> · 헬스장 폐업 피해구제 2021년 27건 → 2024년 88건, 3배 이상 급증 (한국소비자원)</span></div>
-          <p class="reg-tail">킵페이 도입과 약관 조항 한 단락 추가만으로 개정 고시의 표시 의무를 충족합니다.</p>
+          <p class="reg-tail">스포츠 안심결제 도입과 약관 조항 한 단락 추가만으로 개정 고시의 표시 의무를 충족합니다.</p>
         </aside>
       </div>
     </div>
@@ -722,7 +724,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
       <div>
         <span class="sec-kicker">Execution Partners</span>
         <h2>전략 파트너</h2>
-        <p>지엘글로벌 · 더라인스포츠 — 기획을 현장의 성과로 바꾸는 실행 파트너와 함께합니다.</p>
+        <p>지엘글로벌 · 더라인스포츠 · 화신 — 기획을 현장의 성과로 바꾸는 실행 파트너와 함께합니다.</p>
       </div>
       <a class="btn btn-solid" href="#partners">전략 파트너사 보기 &nbsp;→</a>
     </div>
@@ -736,11 +738,11 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
       <div class="teaser-tx">
         <span class="sec-kicker">Nationwide Network</span>
         <h2 class="sec-title">오렌지골프존<br>전국 직영 네트워크</h2>
-        <p class="sec-desc">전 매장 100% 직영. 수도권 핵심 상권의 대형 골프 아카데미 13곳과 JH FITNESS 4곳을 하나의 기준으로 운영합니다.</p>
+        <p class="sec-desc">전 매장 100% 직영. 수도권 핵심 상권의 대형 골프 아카데미 13곳을 하나의 기준으로 운영합니다.</p>
         <a class="btn btn-navy" href="#network">전국 매장 전체 보기 &nbsp;→</a>
       </div>
       <div class="teaser-nums">
-        <div><b><span data-count="17">0</span></b><span>직영 매장</span></div>
+        <div><b><span data-count="13">0</span></b><span>직영 매장</span></div>
         <div><b><span data-count="630">0</span></b><span>총 타석</span></div>
         <div><b><span data-count="28">0</span><i>+</i></b><span>스크린룸</span></div>
         <div><b>5,124<i>평</i></b><span>자가 건물 면적</span></div>
@@ -758,7 +760,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
       <span class="sec-kicker">Nationwide Network</span>
       <h1 class="pgnet-title">오렌지골프존 전국 직영 네트워크</h1>
       <div class="pgnet-stats">
-        <div><b>17</b><span>직영 매장</span></div>
+        <div><b>13</b><span>직영 매장</span></div>
         <div><b>630</b><span>총 타석</span></div>
         <div><b>28+</b><span>스크린룸</span></div>
         <div><b>5,124평</b><span>자가 건물 면적</span></div>
@@ -772,10 +774,11 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
       <button class="chip on" data-f="all">전체</button>
       <button class="chip" data-f="golf">골프 아카데미</button>
       <button class="chip" data-f="room">스크린 · 룸</button>
-      <button class="chip" data-f="fit">JH FITNESS</button>
     </div>
+    <p class="net-help rv">각 매장을 누르면 <b>네이버지도</b>로 이동합니다 · 사진 · 주소 · 지도를 한 번에 확인하세요.</p>
     <div class="net-grid">
       <article class="store rv" data-t="golf" data-map="경기도 수원시 장안구 천천로 100" role="link" tabindex="0" aria-label="오렌지골프 수원점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">오렌지골프 수원점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>오렌지골프 수원점</h4><span class="store-badge">돔인도어</span></div>
         <p class="store-region">Suwon</p>
         <div class="store-nums"><span>타석 <b>120</b></span><span>회원 <b>3,000명</b></span><span><b>2,000평</b></span></div>
@@ -783,6 +786,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="golf" data-map="경기도 고양시 장항동 757 로데오탑 6F" role="link" tabindex="0" aria-label="오렌지골프 일산점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">오렌지골프 일산점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>오렌지골프 일산점</h4><span class="store-badge">자가건물</span></div>
         <p class="store-region">Ilsan</p>
         <div class="store-nums"><span>타석 <b>90</b></span><span>회원 <b>1,800명</b></span><span><b>800평</b></span></div>
@@ -790,6 +794,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="golf" data-map="경기도 안산시 단원구 고잔동 779-2 2F" role="link" tabindex="0" aria-label="오렌지골프 안산점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">오렌지골프 안산점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>오렌지골프 안산점</h4><span class="store-badge">시아테마파크</span></div>
         <p class="store-region">Ansan</p>
         <div class="store-nums"><span>타석 <b>75</b></span><span>회원 <b>2,000명</b></span><span><b>650평</b></span></div>
@@ -797,6 +802,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="golf" data-map="경기도 화성시 영천동 680 에이스케이시티타워" role="link" tabindex="0" aria-label="동탄 1호점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">동탄 1호점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>동탄 1호점</h4><span class="store-badge">프리미엄</span></div>
         <p class="store-region">Dongtan</p>
         <div class="store-nums"><span>타석 <b>80</b></span><span>회원 <b>2,500명</b></span><span><b>800평</b></span></div>
@@ -804,6 +810,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="golf" data-map="경기도 화성시 동탄첨단산업1로 27" role="link" tabindex="0" aria-label="동탄 IX타워점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">동탄 IX타워점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>동탄 IX타워점</h4><span class="store-badge">프리미엄</span></div>
         <p class="store-region">Dongtan</p>
         <div class="store-nums"><span>타석 <b>60</b></span><span><b>1,000평</b></span></div>
@@ -811,6 +818,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="golf" data-map="경기도 화성시 동탄대로 446" role="link" tabindex="0" aria-label="청해골프 동탄1호점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">청해골프 동탄1호점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>청해골프 동탄1호점</h4><span class="store-badge">프리미엄</span></div>
         <p class="store-region">Dongtan</p>
         <div class="store-nums"><span>타석 <b>95</b></span><span>회원 <b>2,500명</b></span><span><b>2,500평</b></span></div>
@@ -818,6 +826,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="golf" data-map="경기도 파주시 해올2길 7 다율타워 5F" role="link" tabindex="0" aria-label="청해골프 파주점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">청해골프 파주점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>청해골프 파주점</h4><span class="store-badge">프리미엄</span></div>
         <p class="store-region">Paju</p>
         <div class="store-nums"><span>타석 <b>55</b></span><span>회원 <b>1,400명</b></span><span><b>600평</b></span></div>
@@ -825,6 +834,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="golf" data-map="위례광장로 300 6F" role="link" tabindex="0" aria-label="버디톡골프 위례점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">버디톡골프 위례점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>버디톡골프 위례점</h4><span class="store-badge">아카데미</span></div>
         <p class="store-region">Wirye</p>
         <div class="store-nums"><span>타석 <b>45</b></span><span>회원 <b>1,300명</b></span><span><b>800평</b></span></div>
@@ -832,6 +842,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="golf" data-map="경기도 하남시 미사대로 410 오벨리스크 3F" role="link" tabindex="0" aria-label="버디톡골프 미사점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">버디톡골프 미사점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>버디톡골프 미사점</h4><span class="store-badge">아카데미</span></div>
         <p class="store-region">Misa</p>
         <div class="store-nums"><span>타석 <b>50</b></span><span>회원 <b>1,500명</b></span><span><b>650평</b></span></div>
@@ -839,6 +850,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="golf" data-map="서울 구로구 경인로 661 신도림1차푸르지오" role="link" tabindex="0" aria-label="VIP골프 신도림점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">VIP골프 신도림점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>VIP골프 신도림점</h4><span class="store-badge">아카데미</span></div>
         <p class="store-region">Seoul</p>
         <div class="store-nums"><span>타석 <b>55</b></span><span>회원 <b>1,500명</b></span><span><b>1,000평</b></span></div>
@@ -846,6 +858,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="room" data-map="경기도 화성시 동탄대로 446" role="link" tabindex="0" aria-label="동탄 그란비아스타점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">동탄 그란비아스타점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>동탄 그란비아스타점</h4><span class="store-badge">스크린 룸</span></div>
         <p class="store-region">Dongtan</p>
         <div class="store-nums"><span>룸 <b>20실</b></span><span><b>600평</b></span></div>
@@ -853,6 +866,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="room" data-map="경기도 화성시 동탄대로시범길 134 B311호" role="link" tabindex="0" aria-label="카카오스크린룸 동탄카림점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">카카오스크린룸 동탄카림점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>카카오스크린룸 동탄카림점</h4><span class="store-badge">프리미엄 룸</span></div>
         <p class="store-region">Dongtan</p>
         <div class="store-nums"><span>룸 <b>12실</b></span><span><b>320평</b></span></div>
@@ -860,38 +874,11 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
       <article class="store rv" data-t="room" data-map="경기도 안산시 단원구 고잔동 779-2 시아테마파크 2F" role="link" tabindex="0" aria-label="골프존파크 룸 안산점 네이버지도에서 보기">
+        <div class="store-photo" aria-hidden="true"><span class="sp-name">골프존파크 룸 안산점</span><span class="sp-tag">PHOTO</span></div>
         <div class="store-top"><h4>골프존파크 룸 안산점</h4><span class="store-badge">스크린 룸</span></div>
         <p class="store-region">Ansan</p>
         <div class="store-nums"><span>타석 <b>12</b></span><span><b>200평</b></span></div>
         <p class="store-addr">경기도 안산시 단원구 고잔동 779-2 시아테마파크 2F</p>
-        <span class="store-go">네이버지도에서 보기 →</span>
-      </article>
-      <article class="store rv" data-t="fit" data-map="서울 강남구 봉은사로 116 은성빌딩 B1" role="link" tabindex="0" aria-label="JH FITNESS 신논현역점 네이버지도에서 보기">
-        <div class="store-top"><h4>JH FITNESS 신논현역점</h4><span class="store-badge">헬스 · PT</span></div>
-        <p class="store-region">Gangnam</p>
-        <div class="store-nums"><span><b>500평</b></span><span><b>24시간</b></span></div>
-        <p class="store-addr">서울 강남구 봉은사로 116 은성빌딩 B1 · 신논현역 1분</p>
-        <span class="store-go">네이버지도에서 보기 →</span>
-      </article>
-      <article class="store rv" data-t="fit" data-map="경기도 성남시 수정구 위례동로 153 에이플타워 10층" role="link" tabindex="0" aria-label="JH FITNESS 위례점 네이버지도에서 보기">
-        <div class="store-top"><h4>JH FITNESS 위례점</h4><span class="store-badge">헬스 · PT</span></div>
-        <p class="store-region">Wirye</p>
-        <div class="store-nums"><span><b>1,000평대</b></span><span>호텔식 · GX · 필라테스</span></div>
-        <p class="store-addr">경기도 성남시 수정구 위례동로 153 에이플타워 10층</p>
-        <span class="store-go">네이버지도에서 보기 →</span>
-      </article>
-      <article class="store rv" data-t="fit" data-map="경기도 성남시 분당구 성남대로 165 지하1층" role="link" tabindex="0" aria-label="JH FITNESS 미금점 네이버지도에서 보기">
-        <div class="store-top"><h4>JH FITNESS 미금점</h4><span class="store-badge">헬스 · PT</span></div>
-        <p class="store-region">Bundang</p>
-        <div class="store-nums"><span><b>24시간</b> 연중무휴</span><span>외산 머신 <b>50여 종</b></span></div>
-        <p class="store-addr">경기도 성남시 분당구 성남대로 165 지하1층 · 미금역 13m</p>
-        <span class="store-go">네이버지도에서 보기 →</span>
-      </article>
-      <article class="store rv" data-t="fit" data-map="경기도 과천시 과천대로12길 117 펜타원 B동 B1" role="link" tabindex="0" aria-label="JH FITNESS 과천점 네이버지도에서 보기">
-        <div class="store-top"><h4>JH FITNESS 과천점</h4><span class="store-badge">헬스 · PT</span></div>
-        <p class="store-region">Gwacheon</p>
-        <div class="store-nums"><span><b>365일</b> 연중무휴</span><span>하이엔드 머신 라인업</span></div>
-        <p class="store-addr">경기도 과천시 과천대로12길 117 펜타원 B동 B1</p>
         <span class="store-go">네이버지도에서 보기 →</span>
       </article>
     </div>
@@ -933,6 +920,14 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <p>아파트 · 오피스텔 커뮤니티센터 운영 전문 기업입니다. 전국 20개 이상 단지의 위탁 운영 실적과 중도 계약 해지 0회의 기록을 바탕으로, 운동시설 인테리어와 헬스기구 납품 · 설치부터 골프 · 키즈 프로그램, 자가 개발 회원 관리 시스템까지 커뮤니티 운영의 전 과정을 본사 직영으로 수행합니다.</p>
         <div class="ptn-chips"><span>커뮤니티센터 위탁 운영</span><span>운동시설 인테리어 · 기구</span><span>골프 · 키즈 프로그램</span><span>자가 개발 CRM</span></div>
         <a class="ptn-more" href="#thelinesports">더라인스포츠 상세 보기 &nbsp;→</a>
+      </article>
+      <article class="ptn rv d2">
+        <span class="ptn-en">HWASHIN</span>
+        <h3>화신</h3>
+        <p class="ptn-ceo">대표 이동항</p>
+        <p>현장 시공과 공급 실행을 담당하는 협력 파트너입니다. 검증된 시공·공급 역량을 바탕으로 지엘홀딩스의 사업 확장을 현장에서 함께 수행합니다.</p>
+        <div class="ptn-chips"><span>시공 · 공급</span><span>현장 실행</span><span>사업 확장 협력</span></div>
+        <a class="ptn-more" href="#hwashin">화신 상세 보기 &nbsp;→</a>
       </article>
       </div>
       <p class="ptn-note rv">협업 구조 — 지엘홀딩스의 <b>기획·투자</b> 위에 파트너사의 <b>시공·운영·마케팅 실행</b>이 결합됩니다.</p>
@@ -1048,8 +1043,8 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <article class="biz rv d1">
           <span class="biz-glyph">Lease · Rental</span>
           <h3>리스 · 렌탈 금융</h3>
-          <p>골프 장비와 헬스 기구의 리스 · 렌탈, 그리고 운영 자금이 필요한 기존 사업장을 위한 재 리스&amp;렌탈 금융까지. 24~36개월 무이자 할부 구조로 초기 투자와 운영 부담을 낮춥니다.</p>
-          <div class="biz-foot"><span>무이자 24~36개월</span><span>초기 비용 절감</span><span>운영 자금 지원</span></div>
+          <p>골프 장비와 헬스 기구의 리스 · 렌탈, 그리고 운영 자금이 필요한 기존 사업장을 위한 재 리스&amp;렌탈 금융까지. 24~36개월 분담무이자 할부 구조로 초기 투자와 운영 부담을 낮춥니다.</p>
+          <div class="biz-foot"><span>분담무이자 24~36개월</span><span>초기 비용 절감</span><span>운영 자금 지원</span></div>
         </article>
         <article class="biz rv d2">
           <span class="biz-glyph">Consulting</span>
@@ -1139,6 +1134,52 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
   </section>
 </div><!-- /view-thelinesports -->
 
+<!-- ================= HWASHIN PAGE VIEW ================= -->
+<div id="view-hwashin" hidden>
+  <section class="pgnet-hero">
+    <div class="wrap">
+      <button class="back-btn" data-go="#partners" type="button">← 전략 파트너로</button>
+      <span class="sec-kicker">Execution Partner</span>
+      <h1 class="pgnet-title">화신<small>HWASHIN · Construction &amp; Supply</small></h1>
+      <p class="glg-ceo">대표 이동항</p>
+      <p class="pgnet-sub">현장 시공과 공급 실행을 담당하는 지엘홀딩스의 협력 파트너입니다. 검증된 시공 · 공급 역량을 바탕으로 그룹의 사업 확장을 현장에서 함께 수행하며, 기획과 투자를 실제 공간과 성과로 구현합니다.</p>
+      <div class="ptn-chips"><span>현장 시공</span><span>자재 · 장비 공급</span><span>현장 실행 · 관리</span></div>
+    </div>
+  </section>
+  <section class="sec sec-ivory net-list-sec">
+    <div class="wrap">
+      <div class="biz-grid glg-grid">
+        <article class="biz rv">
+          <span class="biz-glyph">Construction</span>
+          <h3>현장 시공</h3>
+          <p>스포츠 · 상업 공간의 현장 시공을 책임지고 수행합니다. 설계 도면을 실제 공간으로 구현하는 시공 실무 역량으로, 지엘홀딩스와 파트너사의 사업 현장을 안정적으로 완성합니다.</p>
+          <div class="biz-foot"><span>공간 시공</span><span>마감 · 품질 관리</span></div>
+        </article>
+        <article class="biz rv d1">
+          <span class="biz-glyph">Supply</span>
+          <h3>자재 · 장비 공급</h3>
+          <p>시공에 필요한 자재와 장비를 합리적인 조건으로 공급합니다. 공급망 관리와 현장 조달 역량으로 일정과 원가를 안정적으로 맞춰, 사업화의 초기 부담을 낮춥니다.</p>
+          <div class="biz-foot"><span>자재 조달</span><span>장비 공급</span></div>
+        </article>
+        <article class="biz rv d2">
+          <span class="biz-glyph">Field Execution</span>
+          <h3>현장 실행 · 관리</h3>
+          <p>기획 · 투자 단계의 계획을 현장에서 실행으로 옮깁니다. 공정 관리와 현장 대응으로 지엘홀딩스 그룹의 사업 확장을 전국 현장에서 함께 수행합니다.</p>
+          <div class="biz-foot"><span>공정 관리</span><span>사업 확장 협력</span></div>
+        </article>
+      </div>
+      <div class="glg-links rv">
+        <a class="btn btn-navy" href="#contact">제휴 · 시공 문의 &nbsp;→</a>
+      </div>
+      <p class="glg-role rv">지엘홀딩스 그룹 내 역할 — 현장 시공과 자재 · 장비 공급을 담당하는 그룹의 실행 파트너입니다.</p>
+      <div class="pgnet-return" style="background:none;padding:52px 0 0">
+        <button class="back-btn dark" data-go="#partners" type="button">← 전략 파트너로</button>
+        <button class="back-btn dark" type="button">← 처음 화면으로</button>
+      </div>
+    </div>
+  </section>
+</div><!-- /view-hwashin -->
+
 
 
 <!-- ================= FOOTER ================= -->
@@ -1152,7 +1193,6 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <div class="pp rv d2"><b>KIS정보통신</b><span>VAN · PG</span></div>
         <div class="pp rv d3"><b>KSNET</b><span>케이에스넷</span></div>
         <div class="pp rv d4"><b>DB손해보험</b><span>Assurance</span></div>
-        <div class="pp rv d4"><b>KEEPPAY</b><span>킵페이 안심결제</span></div>
       </div>
     </div>
   </div>
@@ -1168,6 +1208,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
         <li><b>경기도 수원시 장안구 천천로 100, 5층</b></li>
         <li>Tel. 010-2786-1771</li>
         <li><a href="mailto:minimi1210@hanmail.net">minimi1210@hanmail.net</a></li>
+              <li><a href="https://glholdings.kr/" target="_blank" rel="noopener">glholdings.kr</a></li>
       </ul>
     </div>
     <div class="foot-col">
@@ -1269,7 +1310,7 @@ footer{background:var(--navy-950);color:var(--on-dark);border-top:1px solid var(
 
   /* ---------- view router ---------- */
   var vMain=document.getElementById('view-main');
-  var views={'#network':document.getElementById('view-network'),'#partners':document.getElementById('view-partners'),'#hospital':document.getElementById('view-hospital'),'#glglobal':document.getElementById('view-glglobal'),'#thelinesports':document.getElementById('view-thelinesports')};
+  var views={'#network':document.getElementById('view-network'),'#partners':document.getElementById('view-partners'),'#hospital':document.getElementById('view-hospital'),'#glglobal':document.getElementById('view-glglobal'),'#thelinesports':document.getElementById('view-thelinesports'),'#hwashin':document.getElementById('view-hwashin')};
   function revealNow(root){
     root.querySelectorAll('.rv').forEach(function(el){
       el.classList.add('in');
